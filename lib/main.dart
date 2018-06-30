@@ -45,27 +45,41 @@ class _MainState extends State<Main> {
           });
         },
         children: <Widget>[
-          new Center(
-            child: new Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                new Icon(Icons.record_voice_over),
-                new Text("Users")
-              ],
-            ),
-          ),
-          new Center(
-            child: new Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                new Icon(Icons.chat_bubble),
-                new Text("Alerts")
-              ],
-            ),
-          ),
+          new EchoPage(),
+          new RoomPage(),
         ],
       ),
     ),
+    );
+  }
+}
+
+class EchoPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new Center(
+      child: new Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          new Icon(Icons.record_voice_over),
+          new Text("Users")
+        ],
+      ),
+    );
+  }
+}
+
+class RoomPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new Center(
+      child: new Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          new Icon(Icons.chat_bubble),
+          new Text("Users")
+        ],
+      ),
     );
   }
 }
